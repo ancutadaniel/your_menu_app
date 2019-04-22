@@ -14,8 +14,6 @@ import phone from './phone.png';
 import trophy from './trophy.png';
 import about_us from './about-us.jpg';
 import about_us1 from './about_us1.jpg';
-import miha from './miha.jpg';
-import dan from './dan.jpg';
 import tst_1 from './tst_1.png';
 import tst_2 from './tst_2.png';
 import tst_3 from './tst_3.png';
@@ -51,8 +49,6 @@ export {
     trophy,
     about_us1,
     about_us,
-    miha,
-    dan,
     tst_1,
     tst_2,
     tst_3,
