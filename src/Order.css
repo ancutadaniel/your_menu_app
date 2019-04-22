@@ -1,0 +1,88 @@
+
+.order_intro {
+  margin: 0 auto;
+  height: 450px;
+  background-image: url(./images/order_hero.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.App-logo.order {
+  height: 150px;
+  pointer-events: none;
+  transform: rotate(-20deg);
+  z-index: 99;
+}
+.order_user {
+  margin-top: 10vh;
+}
+.order_user .logo_rot:hover {
+  cursor: pointer;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.logo_container h2 {
+  margin: 0px;
+}
+
+.order_paragraph {
+  padding: 30px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 30px;
+}
+
+.App .categ_container {
+  padding: 100px;
+  background-color: #f2f2f2;
+}
+
+.App .categ {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 65px;
+}
+.App .card {
+  transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s, box-shadow 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+
+}
+
+.App .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px 0px;
+  transform: translateY(-5px);
+
+}
+.categ a {
+  text-decoration: none!important;
+  color: #7e4134;
+}
+
+.categ a:hover {
+  text-decoration: none!important;
+  color: #28a745;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .order_intro {
+    background-image: url(./images/order_hero_sec.png);
+  }
+}
+@media (max-width: 576px) {
+  .App-logo {height: 35vmin;}
+}
+
+ @media (max-width: 576px) {
+  .App .categ_container {
+    padding: 100px 50px;
+  }
+ }

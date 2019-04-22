@@ -1,0 +1,12 @@
+.sugestions {
+    margin-bottom: 0px;
+    list-style: none;
+}
+.sugestions a {
+    color: #212529;
+}
+.sugestions a:hover {
+    text-decoration: none;
+    color:#212529
+}
+
