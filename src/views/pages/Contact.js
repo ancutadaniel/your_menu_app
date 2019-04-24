@@ -20,7 +20,9 @@ class Contact extends React.Component {
             commentId: 0,
             comment:'',
             validated: false,
-            isValid: true
+            isValid: true,
+            mailSent: false,
+            error: null
         };
 
         this.inputChanged = this.inputChanged.bind(this);
@@ -32,7 +34,7 @@ class Contact extends React.Component {
         const user = this.state.user;
         user[e.currentTarget.id] = value;
         this.setState({ user });
-
+        //console.log({user})
     }
 
     async formSubmit(e) {
@@ -44,7 +46,7 @@ class Contact extends React.Component {
 
         const resp = await axios.post(this.apiUrl, this.state.user);
         console.log(resp.data);
-        console.log(this.state.user.comment);
+        //console.log(this.state.user.comment);
 
         this.context.handleUserChange(resp.data);
         this.setState({ validated: true, user: resp.data, redirect: true });
@@ -82,7 +84,7 @@ class Contact extends React.Component {
                                         <Form.Control as="textarea" id="comment" rows="3" value={this.state.user.comment} onChange={this.inputChanged} placeholder="Leave a comment:"/>
 
                                     </Form.Group>
-                                    <Button type="submit" variant="outline-secondary"><a className="send" href="mailto:{this.state.user.email}">Send</a></Button>
+                                    <Button type="submit" variant="outline-secondary"><a className="send" href={`mailto:${this.state.user.email}`}>Send</a></Button>
                                 </Form>
                                 <p>{!this.state.isValid ? ("Name, email or password is missing") : ''}</p>
                             </Container>

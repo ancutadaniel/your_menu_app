@@ -14,7 +14,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 library.add(fas, fab, faCheckSquare, faGoogle, faFacebook);
 
-
 class App extends  React.Component {
   constructor(props) {
     super(props);
